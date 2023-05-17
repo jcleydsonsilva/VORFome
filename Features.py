@@ -53,26 +53,26 @@ if __name__ == "__main__":
     #***********************************************************************#
     for key in fastant:
         res = CalculateNTFrequence(fastant[key])
-        output.write(key + ',')
+        output.write(key)
         
         # Complete sequence
         for r in res:
-            output.write(str(res[r]) + ',')
+            output.write( ',' + str(res[r]) )
         
         # n terminal
         medium = int (len(fastant[key]) / 2)
         res = CalculateNTFrequence(fastant[key][0:medium])
         for r in res:
-            output.write(str(res[r]) + ',')
+            output.write(',' + str(res[r]))
 
         # c terminal
         medium = int (len(fastant[key]) / 2)
         res = CalculateNTFrequence(fastant[key][medium::])
         for r in res:
-            output.write(str(res[r]) + ',')
+            output.write(',' + str(res[r]))
 
         res = CalculateAAComposition(fastaaa[key])
         for r in res:
-            output.write(str(res[r]) + ',')
+            output.write(',' + str(res[r]))
         output.write('\n') 
     output.close()

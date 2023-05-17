@@ -19,11 +19,11 @@ def get_data(file_seq):
 		line = line.replace('\n', '')
 		if('>' in line):
 			key = line.replace('>', '')
-			fasta[key] = sequencia
+			fasta[key.replace(' ','_').replace(',','')] = sequencia
 			sequencia = ''
 		else:
 			sequencia = sequencia + line
-	fasta[key] = sequencia
+	fasta[key.replace(' ','_').replace(',','')] = sequencia
 	f1.close()
 	return fasta
 
@@ -204,8 +204,8 @@ def main():
 											orf = str(seq[0:int(ag)] + seq[(gt+2):len(seq)])
 											orfp = translate_rna(orf)
 											if orfp.count('*') < 2 and orfp[len(orfp)-1] == '*' and len(orfp) > 30:           
-												file_orfs_write.write('>'+key_f +'_'+ str(count) + '_intron_' + str(ag) + '-' + str(gt)+ '\n' + orf + '\n')
-												file_prot_write.write('>'+key_f +'_'+ str(count) + '_intron_' + str(ag) + '-' + str(gt)+ '\n' + orfp + '\n')
+												file_orfs_write.write('>'+key_f.replace(' ','_') +'_'+ str(count) + '_intron_' + str(ag) + '-' + str(gt)+ '\n' + orf + '\n')
+												file_prot_write.write('>'+key_f.replace(' ','_') +'_'+ str(count) + '_intron_' + str(ag) + '-' + str(gt)+ '\n' + orfp + '\n')
 							orfp = translate_rna(seq)
 							if orfp.count('*') < 2 and orfp[len(orfp) -1] == '*' and orfp not in seq_preview:
 								file_orfs_write.write(">"+ key_f +'_'+ str(count) + '\n')
