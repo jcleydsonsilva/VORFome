@@ -1,4 +1,5 @@
 # VORFome
+# Chapter 2: ORFomes: artificial intelligence in the detection of geminiviral ORFs 
 This project aims to develop an artificial intelligence (AI)-based system for the detection of Open Reading Frames (ORFs) in Geminiviruses, which are a group of plant-infecting viruses known to encode small ORFs and possess introns, a rare occurrence in viral genomes. The identification of these ORFs is crucial for understanding the pathogenicity of Geminiviruses and developing effective control measures.
 
 Using machine learning algorithms and neural networks, the proposed system will analyze genomic data and accurately identify ORFs in Geminiviruses. The system will be trained on a large dataset of Geminivirus genomic sequences, taking into account the presence of introns and small ORFs.
