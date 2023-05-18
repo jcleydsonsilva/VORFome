@@ -15,8 +15,11 @@ The development of an AI-based system for ORF detection in Geminiviruses, which 
 # Install VORFome
 
 > git clone https://github.com/jcleydsonsilva/VORFome.git
+
 > cd VORFome
+
 > pip install biopython
+
 > pip install numpy
 
 
