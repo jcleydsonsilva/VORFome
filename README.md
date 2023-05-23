@@ -31,7 +31,7 @@ The development of an AI-based system for ORF detection in Geminiviruses, which 
 
 2) Executing the Features.py script with the input files ORFs-cds.fasta and ORFs-to-aminoadics_sequence.fasta. This script is expected to generate features or additional information based on the identified ORFs and their corresponding coding sequences.
 
-> python Features.py ORFs-cds.fasta ORFs-to-aminoadics_sequence.fasta
+> python Features.py ORFs-cds.fasta ORFs-to-amino-acids-sequence.fasta
 
 3) Running the Classifier.py script with the input file Features.csv. This script likely performs classification tasks using the generated features and a machine learning classifier.
 
