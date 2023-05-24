@@ -172,7 +172,7 @@ def main():
 	#fasta = get_data('Sequence.fa')
 	fasta = get_data(sys.argv[1])
 	file_orfs = 'ORFs-cds.fasta'
-	file_prot = 'ORFs-to-aminoadics_sequence.fasta'
+	file_prot = 'ORFs-to-amino-acids-sequence.fasta'
 	file_orfs_write = open(file_orfs, 'w')
 	file_prot_write = open(file_prot, 'w')
 	for key in fasta:
